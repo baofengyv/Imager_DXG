@@ -65,7 +65,6 @@
         }
 
         img.src = imgURL;
-
     }
 
     function writeToZipFile(images) {
