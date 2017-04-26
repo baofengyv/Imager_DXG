@@ -105,12 +105,17 @@
                 var blobURL = window.URL.createObjectURL(blob);
                 zipWriter = null;
 
+                var d = new Date();
+
+                var name =
+                    "BFY[" +
+                    (d.getMonth() + 1) + "-" + d.getDate() + " " +
+                    d.getHours() + "-" + d.getMinutes() + "-" + d.getSeconds() + "]";
                 // 下载
                 var downloadLink = document.createElement("a");
-                downloadLink.download = "fefefname name name" + ".zip";
+                downloadLink.download = name + ".zip";
                 downloadLink.href = blobURL;
                 downloadLink.click();
-                //                 fileList.innerHTML = "";
             });
         }
 
